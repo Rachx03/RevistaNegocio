@@ -9,7 +9,11 @@ const Revista = dynamic(() => import('@/components/Revista'), {
 
 export default function Home() {
   return (
-    <div className=" w-full h-screen bg-[url('/fondoMadera.jpeg')] bg-cover bg-center">
+    <div className=" w-full h-screen "  style={{
+        backgroundImage: "url('/fondoMadera.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}>
       <Revista />
     </div>
   );
