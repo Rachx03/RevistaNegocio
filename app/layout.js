@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Exo } from 'next/font/google';
+import FirebaseAnalytics from "@/firebase";
 
 const exo = Exo({
   subsets: ["latin"],
@@ -66,7 +67,7 @@ export const metadata = {
     siteName: "Techno Solutions",
     images: [
       {
-        url: "/logo.svg",
+        url: "https://i.ibb.co/LDzpp56D/logo.png",
         width: 800,
         height: 600,
         alt: "Techno Solutions Logo",
@@ -91,6 +92,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${exo.variable} antialiased`}
       >
+       <FirebaseAnalytics />
         {children}
       </body>
     </html>
